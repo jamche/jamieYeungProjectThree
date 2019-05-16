@@ -1,0 +1,37 @@
+.quizBoxContainer{
+  border:1px solid black;
+ text-align: center;
+  margin:0 auto;
+  width: 100%;
+}
+  .questionBox{
+    border: 1px solid red;
+  }
+  .choiceContainer{
+    margin:0 auto;
+    width: 100%;
+  }
+    .choiceBox{
+      border:1px solid blue;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    button{
+        width: 20%;
+        margin: 0 auto;
+        padding: 10px 24px;
+      }
+  .answerBox{
+    border: 1px solid darkgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .questionBox,
+  .choiceBox,
+  .answerBox{
+    width: 70%;
+    height: 300px;
+  }
