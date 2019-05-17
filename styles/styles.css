@@ -199,63 +199,24 @@ img {
   height: auto;
 }
 
+.wrapper {
+  margin: 10% 20%;
+}
+
 .quizBoxContainer {
-  border: 1px solid black;
   text-align: center;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.questionBox {
-  border: 1px solid red;
-}
-
-.choiceContainer {
-  margin: 0 auto;
-  width: 100%;
 }
 
 .choiceBox {
-  border: 1px solid blue;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  border: 1px solid red;
+  margin: 0 auto;
+  width: 100%;
+  height: 500px;
 }
 
 button {
   width: 20%;
   margin: 0 auto;
   padding: 10px 24px;
-}
-
-.answerBox {
-  border: 1px solid darkgreen;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.questionBox,
-.choiceBox,
-.answerBox {
-  width: 70%;
-  height: 300px;
 }
 /*# sourceMappingURL=styles.css.map */
