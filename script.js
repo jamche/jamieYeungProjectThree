@@ -49,10 +49,10 @@ function displayQuestion(question) {
   
   for (let i = 0; i < questionData[count].option.length; i++) {
   
-    $('.options').append($(`<div><label> for=choice`).text(questionData[count].option[i])) +
+    $('.options').append($(`<div><label> for=choice </label>`).text(questionData[count].option[i])) +
     console.log(question[count].option[i]);
     
-    $('.options').append($(`<input type="radio" value="${questionData[count].option[i]}" </div>`).attr({ id: 'answer', name: 'choice' }));
+    $('.options').append($(`<input type="radio" value="${questionData[count].option[i]}" </div>`).attr({ id: 'answer', name: 'choice'}));
   }
 
 }
@@ -64,20 +64,25 @@ $('.choiceBox').on('submit', function (e) {
     $('.answerBox').append($(`<p>${questionData[count].answerText}</p>`));
     $('#next').css('visibility','visible');
     $('input').css('visibility','hidden');
-    
-    console.log('you picked the right option')
+    j++;
+    console.log(j);
+    console.log('you picked the right option');
+  }else{
+      alert('Pick another option and/or Pick an option');
+  }
+  
     // count the answer +1 if correct
     // 
     // keep count of questions completed
-    j++;
-    console.log(j);
+    
     if (j === 5) {
     alert('You\'ve completed the quiz! Hopefully you learned a bit more about Colombia in case you end up visiting the country. Come back later for more quizzes for other countries!');
+
+    $('#next').css('visibility', 'hidden');
+    
+    $('.buttonContainer').append($(`<a>Home</a>`).attr('href','index.html'));
+    // $('#txtBox').val();
     }
-  } else {
-    alert('Wrong choice, please select another option to continue');
-    console.log('wrong answer')
-  }
   // $('.wrongAnswer').html('');
 
 })
@@ -95,8 +100,6 @@ $(next).on('click', function (event) {
   displayQuestion(questionData);
   
   });
-
-
 
 // print the first object in the array
 // append the question to the title

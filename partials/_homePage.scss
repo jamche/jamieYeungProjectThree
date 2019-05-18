@@ -1,39 +1,97 @@
+@mixin fontIndie($sizeValue) {
+  font-family: 'Indie Flower', cursive,;
+  font-size: ($sizeValue);
+  }
+@mixin fontRoboto($sizeValue){
+  font-family: 'Roboto', sans-serif;
+  font-size: ($sizeValue);
+}  
+@mixin primaryColor{
+  background: rgba(250, 240, 230, 0.7);
+}
 *{
   margin: 0;
   padding: 0;
 }
-body{
-  background: url('../assets/guatape.jpg');
+// body{
+  
+// }
+.backgroundHome{
+background: url('../assets/guatape.jpg');
   background-size: cover;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: 0px;
   background-repeat: no-repeat;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-img{
-  width: 100%;
+.homeTitle{
+  text-align: center;
+  padding: 1%;
+  h1{
+  @include fontIndie(4.2rem);
+  }
 }
 // make the flag
-.colombia {
+.colombiaContain{
+  display: flex;
+  justify-content: center;
+}
+  .colombia {
     background: linear-gradient(to bottom, #FCD116 0%, #FCD116 50%, #003893 50%, #003893 75%, #CE1126 75%, #CE1126 100%); 
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    // grow shadow
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
   }
-  a{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .colombia:hover,
+  .colombia:focus,
+  .colombia:active{
+  box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 1);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
   }
 .container{
-  margin: 10%;
+  margin: 3%;
   text-align: center;
-  background: rgba(250,240,230,0.8);
-  padding: 5%;
+  padding: 3%;
+  
 }
 .goQuiz{
-  width: 50%;
-  margin:0 auto;
-  height: auto;
+  width: 75%;
+  margin: 5% auto;
+  padding: 5%;
+  @include primaryColor;
+  h3{
+    @include fontRoboto(20px);
+  }
+  p{
+    margin: 5% 1%;
+    @include fontRoboto(20px);
+  }
+  h6{
+    @include fontRoboto(14px);
+    font-style: italic;
+  }
+}
+
+footer{
+  @include primaryColor;
+  padding: 1%;
+    div{
+    text-align: center;   
+  }
 }
 
 
