@@ -2,15 +2,40 @@
   margin: 0;
   padding: 0;
 }
+body{
+  background: url('../assets/guatape.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
 img{
   width: 100%;
 }
+// make the flag
+.colombia {
+    background: linear-gradient(to bottom, #FCD116 0%, #FCD116 50%, #003893 50%, #003893 75%, #CE1126 75%, #CE1126 100%); 
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 .container{
-  margin:0 10%;
+  margin: 10%;
   text-align: center;
+  background: rgba(250,240,230,0.8);
+  padding: 5%;
 }
 .goQuiz{
-  width: 60%;
+  width: 50%;
   margin:0 auto;
   height: auto;
 }
+
+
+// https://www.cssscript.com/111-css-country-flags/ 
+// for making the colombia flag

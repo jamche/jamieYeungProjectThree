@@ -11,7 +11,7 @@ const questionData = [
     question: 'What is the approximate amount of Colombians that use Uber(Total Population is ~49.07 million?)',
     option: ['1 mil', '2 mil', '3 mil', 'Isn\'t Uber illegal in Colombia?'],
     answer: '2 mil',
-    answerText:'There are still about 2 million people and still increasing that use uber throughout the country even if it is illegal. Uber is still cheaper than the other options currently to travel throughout a major city. '
+    answerText:'Well done! There are about 2 million people and counting that use uber throughout the country(mostly in major cities) even if it is illegal. Uber is still cheaper than the other options that are currently available to travel throughout a major city. '
   },
   // third question data
   {
@@ -88,7 +88,6 @@ $(next).on('click', function (event) {
   $('#next').css('visibility', 'hidden');
   $('input').css('visibility', 'visible');
   event.preventDefault();
-  // $('.test').empty();
   $('.qTitle').html('');
   $('.options').html('');
   $('.answerBox').html('');
