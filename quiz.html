@@ -11,18 +11,28 @@
 
   <div class="wrapper quizBoxContainer">
     <!-- form of question/choices/answer -->
-      <form action="submit" class="choiceBox">
-        <div>
-          <!-- question here -->
-        <h4 class="qTitle"></h4>
+      
+    <form action="submit" class="choiceBox">
+      <div class="test">
+        <div class="title">
+          <h4 class="qTitle"><!-- question here --></h4>
         </div>
-        <!-- choices in this div -->
         <div class="options">
+          <!-- choices in this div -->
         </div>
+        <div class="answerBox">
+              <!-- answer and explanation here -->
+        </div>
+      </div>
         <!-- submit button -->
-        <input type='submit' name="choice">        
-      </form>
-     <!-- answer and explanation here -->
+        <div>
+        <input type='submit' name="choice">
+        </div>
+        <!-- next button to go to next question -->
+        <div>
+        <button id ='next' type='reset'>Next</button>     
+        </div>
+    </form>
   </div>
 
 

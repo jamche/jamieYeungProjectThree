@@ -199,24 +199,52 @@ img {
   height: auto;
 }
 
+body {
+  background: url();
+}
+
 .wrapper {
-  margin: 10% 20%;
+  margin: 2% 20%;
 }
 
 .quizBoxContainer {
   text-align: center;
 }
 
+.qTitle {
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 100%;
+  padding: 5%;
+}
+
 .choiceBox {
   border: 1px solid red;
   margin: 0 auto;
   width: 100%;
-  height: 500px;
+}
+
+.options {
+  margin: 2%;
+}
+
+.options div {
+  margin: 2%;
+}
+
+input {
+  padding: 10px;
+}
+
+p {
+  margin: 2%;
+  line-height: 1.5;
 }
 
 button {
+  visibility: hidden;
   width: 20%;
-  margin: 0 auto;
+  margin: 2% auto;
   padding: 10px 24px;
 }
 /*# sourceMappingURL=styles.css.map */
