@@ -1,20 +1,12 @@
-ul{
-  margin:0;
-  padding:0;
-  list-style-type: none;
-}
-li,
-a{
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
 .quizBackground{
   background: url('../assets/medellin.jpg');
   background-size : cover;
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
 }
 
 .navContainer{
@@ -28,18 +20,58 @@ ul{
     text-shadow: 2px 2px 5px black;
     font-size: 2rem;
     font-weight: 700;
+    @media screen and (max-width:480px) {
+      font-size: 1.5rem;
+      
+    }
     a{
       color: seashell;
     }
   }
 }
+
+// nav hover
+.navContainer li a {
+  position:relative;
+  z-index: 1;
+  }
+.navContainer li a:hover {
+  color: #fff;
+  }
+.navContainer li a:after {
+  display: block;
+  position: absolute;
+  transform:scale(1.1);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '';
+  color: transparent;
+  background: #F5F5F5;
+  opacity: 0;
+  z-index: -1;
+  transition:.2s linear;
+  }
+.navContainer li a:hover:after {
+  opacity: .5;
+  visibility: visible;
+  box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.75);
+  height: 100%;
+}
+// end of hover
 .wrapper{
   margin: 0 20%;
 }
 .quizBoxContainer{
   text-align: center;
   margin-top: 3%;
-
+  @media screen and (max-width:480px){
+    padding: 1% 0;
+  }
 }
 .choiceBox{
     background: rgba(255,245,238,0.9);
@@ -49,25 +81,151 @@ ul{
     border-radius: 20px;
     box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.75);
   }
+// animate choice box
+.bounceInTop {
+	-webkit-animation: bounceInTop 1.1s both;
+	        animation: bounceInTop 1.1s both;
+}
+// keyframes
+@-webkit-keyframes bounceInTop {
+  0% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+            transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+            transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes bounceInTop {
+  0% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+            transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+            transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+// end of animation
+
   .title,
   .options{
     padding:1% 0;
+    @media screen and (max-width:480px) {
+      padding:3%;
+        
+      }
   } 
   .qTitle{
    padding: 2%;
     @include fontRaleway(20px);
+    @media screen and (max-width:480px) {
+        @include fontRaleway(16px);
+
+      }
   }
  .options div{
-   margin: 1%;
    @include fontRaleway(20px);
+   @media screen and (max-width:480px) {
+        @include fontRaleway(16px);
+      }
   }
   .answerBox{
     padding: 0 10%;
-  p{
-    @include fontRaleway(20px);
+    p{
+      @include fontRaleway(20px);
+      @media screen and (max-width:480px) {
+        font-size: 16px;
+        padding: 0 5%;
+      }
+    }
   }
-  }
- 
   // for hiding button for js file before submit is clicked
   button{
     visibility: hidden;
@@ -102,3 +260,4 @@ ul{
   }
   
   // https://fdossena.com/?p=html5cool/buttons/i.frag for the very nice button style
+  // https://codepen.io/maheshambure21/pen/QwXaRw for the hover effect

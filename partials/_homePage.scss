@@ -5,14 +5,36 @@
 @mixin fontRaleway($sizeValue){
   font-family: 'Raleway', sans-serif;
   font-size: ($sizeValue);
+  line-height: 1.5;
 }  
 @mixin primaryColor{
   background: rgba(250, 240, 230, 0.7);
 }
-*{
+$breakFirst:600px;
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+li,
+a{
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
+
+// *{
+//   margin: 0;
+//   padding: 0;
+// }
 // body{
   
 // }
@@ -27,16 +49,58 @@ background: url('../assets/guatape.jpg');
   flex-direction: column;
   justify-content: space-between;
 }
+
+// home title
 .homeTitle{
   text-align: center;
   padding: 1%;
   h1{
-  @include fontIndie(6rem);
+  @include fontIndie(4rem);
    text-shadow: 2px 2px 5px black;
    font-weight: 700;
    color: seashell;
   }
 }
+// Animate Title
+.trackingInExpand {
+	-webkit-animation: trackingInExpand 1s linear both;
+	        animation: trackingInExpand 1s linear both;
+}
+// keyframes
+@-webkit-keyframes trackingInExpand {
+  0% {
+    letter-spacing: -0.4em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  60%{
+    opacity:0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes trackingInExpand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  60%{
+    opacity:0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// 
+
+
 // make the flag
 .colombiaContain{
   display: flex;
@@ -66,15 +130,50 @@ background: url('../assets/guatape.jpg');
   transform: scale(1.05);
   }
 .container{
-  margin: 3%;
   text-align: center;
   padding: 1%;
-  
+  @media screen and (max-width:$breakFirst){
+    margin-top:10%;
+  }
 }
+
+// animate container
+.slideInDm {
+	-webkit-animation: slideInDm 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slideInDm 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+// keyframes
+@-webkit-keyframes slideInDm {
+  0% {
+    -webkit-transform: translateZ(-1400px) translateY(-800px);
+            transform: translateZ(-1400px) translateY(-800px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInDm {
+  0% {
+    -webkit-transform: translateZ(-1400px) translateY(-800px);
+            transform: translateZ(-1400px) translateY(-800px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+// 
+
 .goQuiz{
-  width: 75%;
+  width: 100%;
   margin: 5% auto;
-  padding: 5%;
+  padding: 10%;
   @include primaryColor;
   border-radius: 20px;
   box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.75);
@@ -83,7 +182,7 @@ background: url('../assets/guatape.jpg');
     font-weight:300;
   }
   p{
-    margin: 5% 1%;
+    margin: 2%;
     font-weight: 700;
     @include fontRaleway(20px);
   }
@@ -106,3 +205,7 @@ footer{
 
 // https://www.cssscript.com/111-css-country-flags/ 
 // for making the colombia flag
+
+
+// http://animista.net
+// for animations on the title of both pages
