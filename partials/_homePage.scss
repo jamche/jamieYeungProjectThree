@@ -6,7 +6,8 @@
   font-family: 'Raleway', sans-serif;
   font-size: ($sizeValue);
   line-height: 1.5;
-}  
+} 
+// quiz background 
 @mixin primaryColor{
   background: rgba(250, 240, 230, 0.7);
 }
@@ -53,12 +54,12 @@ background: url('../assets/guatape.jpg');
 // home title
 .homeTitle{
   text-align: center;
-  padding: 1%;
+  padding: 1% 0;
   h1{
-  @include fontIndie(4rem);
+  @include fontIndie(3.6rem);
    text-shadow: 2px 2px 5px black;
    font-weight: 700;
-   color: seashell;
+   color: #FFD000;
   }
 }
 // Animate Title
@@ -98,13 +99,13 @@ background: url('../assets/guatape.jpg');
   }
 }
 
-// 
-
-
 // make the flag
 .colombiaContain{
   display: flex;
   justify-content: center;
+  @media screen and (max-width:480px){
+    margin-top:15%;
+  }
 }
   .colombia {
     background: linear-gradient(to bottom, #FCD116 0%, #FCD116 50%, #003893 50%, #003893 75%, #CE1126 75%, #CE1126 100%); 
@@ -140,39 +141,37 @@ background: url('../assets/guatape.jpg');
 // animate container
 .slideInDm {
 	-webkit-animation: slideInDm 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slideInDm 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slideInDm 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 // keyframes
 @-webkit-keyframes slideInDm {
   0% {
     -webkit-transform: translateZ(-1400px) translateY(-800px);
-            transform: translateZ(-1400px) translateY(-800px);
+    transform: translateZ(-1400px) translateY(-800px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateZ(0) translateY(0);
-            transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
     opacity: 1;
   }
 }
 @keyframes slideInDm {
   0% {
     -webkit-transform: translateZ(-1400px) translateY(-800px);
-            transform: translateZ(-1400px) translateY(-800px);
+    transform: translateZ(-1400px) translateY(-800px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateZ(0) translateY(0);
-            transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
     opacity: 1;
   }
 }
-
-// 
-
+// end of animation 
 .goQuiz{
   width: 100%;
-  margin: 5% auto;
+  margin: 2% auto;
   padding: 10%;
   @include primaryColor;
   border-radius: 20px;
@@ -199,6 +198,9 @@ footer{
   padding: 1%;
     div{
     text-align: center;   
+  @media screen and (max-width:480px){
+    @include fontRaleway(16px);
+    }  
   }
 }
 

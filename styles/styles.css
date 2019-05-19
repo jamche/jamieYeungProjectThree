@@ -220,15 +220,15 @@ a {
 
 .homeTitle {
   text-align: center;
-  padding: 1%;
+  padding: 1% 0;
 }
 
 .homeTitle h1 {
   font-family: "Indie Flower", cursive;
-  font-size: 4rem;
+  font-size: 3.6rem;
   text-shadow: 2px 2px 5px black;
   font-weight: 700;
-  color: seashell;
+  color: #FFD000;
 }
 
 .trackingInExpand {
@@ -275,6 +275,12 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  .colombiaContain {
+    margin-top: 15%;
+  }
 }
 
 .colombia {
@@ -351,7 +357,7 @@ a {
 
 .goQuiz {
   width: 100%;
-  margin: 5% auto;
+  margin: 2% auto;
   padding: 10%;
   background: rgba(250, 240, 230, 0.7);
   border-radius: 20px;
@@ -394,6 +400,14 @@ footer div {
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+  footer div {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
 .quizBackground {
   background: url("../assets/medellin.jpg");
   background-size: cover;
@@ -410,6 +424,25 @@ footer div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.wrapper {
+  margin: 0 20%;
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    margin: 0 10%;
+  }
+}
+
+h1 {
+  font-family: "Indie Flower", cursive;
+  font-size: 2.5rem;
+  color: #FFD000;
+  text-shadow: 2px 2px 5px black;
+  font-weight: 700;
+  text-align: center;
 }
 
 .navContainer {
@@ -440,7 +473,7 @@ ul li {
 }
 
 ul li a {
-  color: seashell;
+  color: #FFDC72;
 }
 
 .navContainer li a {
@@ -449,7 +482,7 @@ ul li a {
 }
 
 .navContainer li a:hover {
-  color: #fff;
+  color: #FFDC72;
 }
 
 .navContainer li a:after {
@@ -466,7 +499,7 @@ ul li a {
   height: 1px;
   content: '';
   color: transparent;
-  background: #F5F5F5;
+  background: #2D45B3;
   opacity: 0;
   z-index: -1;
   -webkit-transition: .2s linear;
@@ -481,10 +514,6 @@ ul li a {
   height: 100%;
 }
 
-.wrapper {
-  margin: 0 20%;
-}
-
 .quizBoxContainer {
   text-align: center;
   margin-top: 3%;
@@ -492,7 +521,7 @@ ul li a {
 
 @media screen and (max-width: 480px) {
   .quizBoxContainer {
-    padding: 1% 0;
+    margin-top: 15%;
   }
 }
 
@@ -666,19 +695,23 @@ ul li a {
 }
 
 .answerBox {
-  padding: 0 10%;
-}
-
-.answerBox p {
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  line-height: 1.5;
+  padding: 0 5%;
 }
 
 @media screen and (max-width: 480px) {
+  .answerBox {
+    padding: 5%;
+  }
+  .answerBox p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 480px) and (max-width: 480px) {
   .answerBox p {
     font-size: 16px;
-    padding: 0 5%;
   }
 }
 
