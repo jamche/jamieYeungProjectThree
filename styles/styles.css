@@ -359,7 +359,7 @@ a {
   width: 100%;
   margin: 2% auto;
   padding: 10%;
-  background: rgba(250, 240, 230, 0.7);
+  background: rgba(255, 245, 238, 0.9);
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.75);
           box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.75);
@@ -389,7 +389,7 @@ a {
 }
 
 footer {
-  background: rgba(250, 240, 230, 0.7);
+  background: rgba(255, 245, 238, 0.9);
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
   line-height: 1.5;

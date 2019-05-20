@@ -24,20 +24,18 @@ const questionData = [
 
   {
     question: 'What would be the typical cost to fly between any major cities within Colombia',
-    option: ['5$-10$', '11$-41$', '41$-61$', '62$'],
+    option: ['5$-10$', '11$-41$', '41$-61$', '+62$'],
     answer: '11$-41$',
-    answerText: 'Correct! Flights within Colombia are super cheap! Even if booked a few days beforehand, flights can cost sometimes less than $20 for a 1-2 hour flight. Which, in comparison to an 8 hour bus ride with a similar cost sounds much better.'
+    answerText: 'Nice! Flights within Colombia are super cheap! Even if booked a few days beforehand, flights can sometimes cost less than $20 for a 1-2 hour flight. Which, in comparison to an 8 hour bus ride that costs the same sounds like a way better option.'
   },
   // fifth question
   {
     question: 'There is a saying in Colombia that goes likes" No des papaya" which translates to "Don\'t give papaya". What does this mean? ',
-    option: ['If i bought a papaya, don\'t share it', 'I shouldn\'t give my papaya to anyone', 'I shouldn\'t buy fruits on the street', 'Don\'t give an opportunity to be pickpocketed' ],
+    option: ['It\'s illegal to buy papayas', 'I shouldn\'t give my papayas to anyone', 'I shouldn\'t buy fruits on the street', 'Don\'t give an opportunity to be pickpocketed' ],
     answer: 'Don\'t give an opportunity to be pickpocketed',
     answerText: 'Correct! Colombia is safer than ever to visit. But there are still issues with pickpockets. So one should always ensure that they always keep their valuables out of reach.'
   }
 ]
-
-// const questionData = undefined;
 let count = 0;  
 // for completed
 let j = 0;
@@ -45,12 +43,10 @@ let j = 0;
 function displayQuestion(question) {
   
   $('.q-title').append(question[count].question);
-  console.log(question[count].question);
   
   for (let i = 0; i < questionData[count].option.length; i++) {
   //makes the choice show up on the page
     $('.options').append($(`<div> <label> for=choice title </label>`).text(questionData[count].option[i])) +
-    console.log(question[count].option[i]);
   //makes the input show up 
     $('.options').append($(`<input type="radio" value="${questionData[count].option[i]}"</div>`).attr({ id: 'answer', name: 'choice'}));
   }
@@ -66,8 +62,6 @@ $('.choice-box').on('submit', function (e) {
     // hide submit button when submit is hit and answer is correct
     $('input').css('display','none');
     j++;
-    console.log(j);
-    console.log('You picked the right option');
   }else{
       alert('Incorrect, pick another option and/or Pick an option');
   }

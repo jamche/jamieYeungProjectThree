@@ -25,6 +25,8 @@ h1{
   font-weight: 700;
   text-align: center;
 }
+
+
 .nav-container{
   text-align: center;
 }
@@ -82,7 +84,7 @@ ul{
   }
 }
 .choice-box{
-    background: rgba(255,245,238,0.9);
+    @include box-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -202,6 +204,7 @@ ul{
 
 // end of animation
 
+// style quiz question
   .title,
   .options{
     padding:1% 5%;
@@ -218,6 +221,7 @@ ul{
 
       }
   }
+  // options and answer styling
  .options div{
    @include font-raleway(20px);
    @media screen and (max-width:480px) {
