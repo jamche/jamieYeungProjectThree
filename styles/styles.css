@@ -426,6 +426,12 @@ footer div {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 400px), screen and (max-height: 600px) {
+  .quiz-background {
+    height: 130vh;
+  }
+}
+
 .wrapper {
   margin: 0 20%;
 }
@@ -739,7 +745,7 @@ input,
   font-size: 14px;
   line-height: 1.5;
   font-weight: 400;
-  color: seashell;
+  color: #FFDC2B;
   background: royalblue;
   -webkit-box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
           box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
@@ -754,7 +760,7 @@ input:active,
           box-shadow: inset 0 0.6em 2em -0.3em rgba(0, 0, 0, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
 }
 
-input:focus {
+.options input:focus {
   outline: 1px solid royalblue;
 }
 /*# sourceMappingURL=styles.css.map */
