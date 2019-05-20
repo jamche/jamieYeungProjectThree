@@ -1,4 +1,4 @@
-.quizBackground{
+.quiz-background{
   background: url('../assets/medellin.jpg');
   background-size : cover;
   height: 100vh;
@@ -16,14 +16,13 @@
 }
 
 h1{
-  @include fontIndie(2.5rem);
+  @include font-indie(2.5rem);
   color: #FFD000;
   text-shadow: 2px 2px 5px black;
   font-weight: 700;
   text-align: center;
 }
-.navContainer{
-  @include fontIndie(1.2rem);
+.nav-container{
   text-align: center;
 }
 ul{
@@ -31,12 +30,8 @@ ul{
   justify-content: space-between;
   li{
     text-shadow: 2px 2px 5px black;
-    font-size: 2rem;
     font-weight: 700;
-    @media screen and (max-width:480px) {
-      font-size: 1.5rem;
-      
-    }
+    @include font-indie(2rem);
     a{
       color: #FFDC72;
     }
@@ -44,14 +39,14 @@ ul{
 }
 
 // nav hover
-.navContainer li a {
+.nav-container li a {
   position:relative;
   z-index: 1;
   }
-.navContainer li a:hover {
+.nav-container li a:hover {
   color: #FFDC72;
   }
-.navContainer li a:after {
+.nav-container li a:after {
   display: block;
   position: absolute;
   transform:scale(1.1);
@@ -64,26 +59,26 @@ ul{
   height: 1px;
   content: '';
   color: transparent;
-  background: #2D45B3;
+  background: #000;
   opacity: 0;
   z-index: -1;
   transition:.2s linear;
   }
-.navContainer li a:hover:after {
+.nav-container li a:hover:after {
   opacity: .5;
   visibility: visible;
   box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.75);
   height: 100%;
 }
 // end of hover
-.quizBoxContainer{
+.quiz-box-container{
   text-align: center;
-  margin-top: 3%;
+  margin-top: 2%;
   @media screen and (max-width:480px){
-    margin-top: 15%;
+    margin-top: 1%;
   }
 }
-.choiceBox{
+.choice-box{
     background: rgba(255,245,238,0.9);
     display: flex;
     flex-direction: column;
@@ -92,12 +87,12 @@ ul{
     box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.75);
   }
 // animate choice box
-.bounceInTop {
-	-webkit-animation: bounceInTop 1.1s both;
-	        animation: bounceInTop 1.1s both;
+.bounce-in-top {
+	-webkit-animation: bounce-in-top 1.1s both;
+	        animation: bounce-in-top 1.1s both;
 }
 // keyframes
-@-webkit-keyframes bounceInTop {
+@-webkit-keyframes bounce-in-top {
   0% {
     -webkit-transform: translateY(-500px);
             transform: translateY(-500px);
@@ -149,7 +144,7 @@ ul{
             animation-timing-function: ease-out;
   }
 }
-@keyframes bounceInTop {
+@keyframes bounce-in-top {
   0% {
     -webkit-transform: translateY(-500px);
             transform: translateY(-500px);
@@ -206,54 +201,61 @@ ul{
 
   .title,
   .options{
-    padding:1% 0;
+    padding:1% 5%;
     @media screen and (max-width:480px) {
       padding:3%;
         
       }
   } 
-  .qTitle{
+  .q-title{
    padding: 2%;
-    @include fontRaleway(20px);
+    @include font-raleway(20px);
     @media screen and (max-width:480px) {
-        @include fontRaleway(16px);
+        @include font-raleway(16px);
 
       }
   }
  .options div{
-   @include fontRaleway(20px);
+   @include font-raleway(20px);
    @media screen and (max-width:480px) {
-        @include fontRaleway(16px);
+        @include font-raleway(16px);
       }
   }
-  .answerBox{
+  .answer-box{
     padding: 0 5%;
+    @include font-raleway(20px);
     @media screen and (max-width:480px) {
       padding: 5%;
+    }
     p{
-      @include fontRaleway(20px);
+      @include font-raleway(20px);
+      border-width: 2px 0 2px 0;
+      border-style: ridge;
       @media screen and (max-width:480px) {
         font-size: 16px;
       }
     }
-  }
+  
 } 
   // for hiding button for js file before submit is clicked
   button{
     visibility: hidden;
-    @include fontRaleway(20px);
+    @include font-raleway(20px);
   }
   // for styling button and input
+  .button-container{
+    margin: 2% auto;
+  }
   button,
   input,
-  .buttonContainer a{
+  .button-container a{
   display:inline-block;
   padding:0.7em 1.7em;
   margin:0 0.3em 0.3em 0;
   border-radius:0.2em;
   box-sizing: border-box;
   text-decoration:none;
-  @include fontRaleway(14px);
+  @include font-raleway(14px);
   font-weight:400;
   color:seashell;
   background: rgb(65,105,225);
@@ -263,7 +265,7 @@ ul{
   }
     button:active,
     input:active,
-    .buttonContainer a {
+    .button-container a {
       box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
   }
 

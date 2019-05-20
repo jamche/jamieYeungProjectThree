@@ -8,13 +8,12 @@
   <link rel="stylesheet" href="styles/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway:400,700&display=swap" rel="stylesheet">
 </head>
-<body>
-<div class="quizBackground">
-<main>
+<body class="quiz-background">
+<header>
   <div class="wrapper">
-    <h1 class="trackingInExpand">Travel Guru</h1>  
+    <h1 class="tracking-in-expand">Travel Guru</h1>
     <nav>
-      <div class="navContainer trackingInExpand">
+      <div class="nav-container tracking-in-expand">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="quiz.html">Reset Quiz</a></li>
@@ -22,22 +21,24 @@
       </div>
     </nav>
   </div>
-  <div class="wrapper quizBoxContainer">
+</header>
+<main>
+  <div class="wrapper quiz-box-container">
     <!-- form of question/choices/answer -->
-    <form action="submit" class="choiceBox bounceInTop">
-      <div class="questionContainer">
+    <form action="submit" class="choice-box bounce-in-top">
+      <div class="question-container">
         <div class="title">
-          <h4 class="qTitle"><!-- question here --></h4>
+          <h4 class="q-title"><!-- question here --></h4>
         </div>
         <div class="options">
           <!-- choices in this div -->
         </div>
-        <div class="answerBox">
+        <div class="answer-box">
               <!-- answer and explanation here -->
         </div>
       </div>
         <!-- submit button -->
-      <div class="buttonContainer">
+      <div class="button-container">
         <div>
         <input type='submit' name="choice" required>
         </div>
@@ -49,16 +50,11 @@
     </form>
   </div>
 </main>
-</div>
 <footer>
   <div>
     <p>Copyright &copy 2019 Jamie Yeung</p>
   </div>
 </footer>
-
-
-
-
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="script.js"></script>

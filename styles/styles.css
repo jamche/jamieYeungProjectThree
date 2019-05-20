@@ -199,7 +199,7 @@ a {
   text-decoration: none;
 }
 
-.backgroundHome {
+.background-home {
   background: url("../assets/guatape.jpg");
   background-size: cover;
   background-position-x: center;
@@ -218,12 +218,12 @@ a {
           justify-content: space-between;
 }
 
-.homeTitle {
+.home-title {
   text-align: center;
   padding: 1% 0;
 }
 
-.homeTitle h1 {
+.home-title h1 {
   font-family: "Indie Flower", cursive;
   font-size: 3.6rem;
   text-shadow: 2px 2px 5px black;
@@ -231,7 +231,7 @@ a {
   color: #FFD000;
 }
 
-.trackingInExpand {
+.tracking-in-expand {
   -webkit-animation: trackingInExpand 1s linear both;
   animation: trackingInExpand 1s linear both;
 }
@@ -268,7 +268,7 @@ a {
   }
 }
 
-.colombiaContain {
+.colombia-contain {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,7 +278,7 @@ a {
 }
 
 @media screen and (max-width: 480px) {
-  .colombiaContain {
+  .colombia-contain {
     margin-top: 15%;
   }
 }
@@ -324,12 +324,12 @@ a {
   }
 }
 
-.slideInDm {
-  -webkit-animation: slideInDm 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slideInDm 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.slide {
+  -webkit-animation: slide 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-@-webkit-keyframes slideInDm {
+@-webkit-keyframes slide {
   0% {
     -webkit-transform: translateZ(-1400px) translateY(-800px);
     transform: translateZ(-1400px) translateY(-800px);
@@ -342,7 +342,7 @@ a {
   }
 }
 
-@keyframes slideInDm {
+@keyframes slide {
   0% {
     -webkit-transform: translateZ(-1400px) translateY(-800px);
     transform: translateZ(-1400px) translateY(-800px);
@@ -355,7 +355,7 @@ a {
   }
 }
 
-.goQuiz {
+.go-quiz {
   width: 100%;
   margin: 2% auto;
   padding: 10%;
@@ -365,14 +365,14 @@ a {
           box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.75);
 }
 
-.goQuiz h3 {
+.go-quiz h3 {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
   line-height: 1.5;
   font-weight: 300;
 }
 
-.goQuiz p {
+.go-quiz p {
   margin: 2%;
   font-weight: 700;
   font-family: 'Raleway', sans-serif;
@@ -380,7 +380,7 @@ a {
   line-height: 1.5;
 }
 
-.goQuiz h6 {
+.go-quiz h6 {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -408,7 +408,7 @@ footer div {
   }
 }
 
-.quizBackground {
+.quiz-background {
   background: url("../assets/medellin.jpg");
   background-size: cover;
   height: 100vh;
@@ -445,9 +445,7 @@ h1 {
   text-align: center;
 }
 
-.navContainer {
-  font-family: "Indie Flower", cursive;
-  font-size: 1.2rem;
+.nav-container {
   text-align: center;
 }
 
@@ -462,30 +460,25 @@ ul {
 
 ul li {
   text-shadow: 2px 2px 5px black;
-  font-size: 2rem;
   font-weight: 700;
-}
-
-@media screen and (max-width: 480px) {
-  ul li {
-    font-size: 1.5rem;
-  }
+  font-family: "Indie Flower", cursive;
+  font-size: 2rem;
 }
 
 ul li a {
   color: #FFDC72;
 }
 
-.navContainer li a {
+.nav-container li a {
   position: relative;
   z-index: 1;
 }
 
-.navContainer li a:hover {
+.nav-container li a:hover {
   color: #FFDC72;
 }
 
-.navContainer li a:after {
+.nav-container li a:after {
   display: block;
   position: absolute;
   -webkit-transform: scale(1.1);
@@ -499,14 +492,14 @@ ul li a {
   height: 1px;
   content: '';
   color: transparent;
-  background: #2D45B3;
+  background: #000;
   opacity: 0;
   z-index: -1;
   -webkit-transition: .2s linear;
   transition: .2s linear;
 }
 
-.navContainer li a:hover:after {
+.nav-container li a:hover:after {
   opacity: .5;
   visibility: visible;
   -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.75);
@@ -514,18 +507,18 @@ ul li a {
   height: 100%;
 }
 
-.quizBoxContainer {
+.quiz-box-container {
   text-align: center;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 @media screen and (max-width: 480px) {
-  .quizBoxContainer {
-    margin-top: 15%;
+  .quiz-box-container {
+    margin-top: 1%;
   }
 }
 
-.choiceBox {
+.choice-box {
   background: rgba(255, 245, 238, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -542,12 +535,12 @@ ul li a {
           box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.75);
 }
 
-.bounceInTop {
-  -webkit-animation: bounceInTop 1.1s both;
-  animation: bounceInTop 1.1s both;
+.bounce-in-top {
+  -webkit-animation: bounce-in-top 1.1s both;
+  animation: bounce-in-top 1.1s both;
 }
 
-@-webkit-keyframes bounceInTop {
+@-webkit-keyframes bounce-in-top {
   0% {
     -webkit-transform: translateY(-500px);
     transform: translateY(-500px);
@@ -600,7 +593,7 @@ ul li a {
   }
 }
 
-@keyframes bounceInTop {
+@keyframes bounce-in-top {
   0% {
     -webkit-transform: translateY(-500px);
     transform: translateY(-500px);
@@ -655,7 +648,7 @@ ul li a {
 
 .title,
 .options {
-  padding: 1% 0;
+  padding: 1% 5%;
 }
 
 @media screen and (max-width: 480px) {
@@ -665,7 +658,7 @@ ul li a {
   }
 }
 
-.qTitle {
+.q-title {
   padding: 2%;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -673,7 +666,7 @@ ul li a {
 }
 
 @media screen and (max-width: 480px) {
-  .qTitle {
+  .q-title {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -694,23 +687,29 @@ ul li a {
   }
 }
 
-.answerBox {
+.answer-box {
   padding: 0 5%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 480px) {
-  .answerBox {
+  .answer-box {
     padding: 5%;
-  }
-  .answerBox p {
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    line-height: 1.5;
   }
 }
 
-@media screen and (max-width: 480px) and (max-width: 480px) {
-  .answerBox p {
+.answer-box p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  border-width: 2px 0 2px 0;
+  border-style: ridge;
+}
+
+@media screen and (max-width: 480px) {
+  .answer-box p {
     font-size: 16px;
   }
 }
@@ -722,9 +721,13 @@ button {
   line-height: 1.5;
 }
 
+.button-container {
+  margin: 2% auto;
+}
+
 button,
 input,
-.buttonContainer a {
+.button-container a {
   display: inline-block;
   padding: 0.7em 1.7em;
   margin: 0 0.3em 0.3em 0;
@@ -746,7 +749,7 @@ input,
 
 button:active,
 input:active,
-.buttonContainer a {
+.button-container a {
   -webkit-box-shadow: inset 0 0.6em 2em -0.3em rgba(0, 0, 0, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
           box-shadow: inset 0 0.6em 2em -0.3em rgba(0, 0, 0, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
 }

@@ -1,18 +1,16 @@
-@mixin fontIndie($sizeValue) {
+@mixin font-indie($sizeValue) {
   font-family: 'Indie Flower', cursive,;
   font-size: ($sizeValue);
   }
-@mixin fontRaleway($sizeValue){
+@mixin font-raleway($sizeValue){
   font-family: 'Raleway', sans-serif;
   font-size: ($sizeValue);
   line-height: 1.5;
 } 
 // quiz background 
-@mixin primaryColor{
+@mixin box-color{
   background: rgba(250, 240, 230, 0.7);
 }
-$breakFirst:600px;
-
 ul,
 h1,
 h2,
@@ -39,7 +37,7 @@ a{
 // body{
   
 // }
-.backgroundHome{
+.background-home{
 background: url('../assets/guatape.jpg');
   background-size: cover;
   background-position-x: center;
@@ -52,18 +50,18 @@ background: url('../assets/guatape.jpg');
 }
 
 // home title
-.homeTitle{
+.home-title{
   text-align: center;
   padding: 1% 0;
   h1{
-  @include fontIndie(3.6rem);
+  @include font-indie(3.6rem);
    text-shadow: 2px 2px 5px black;
    font-weight: 700;
    color: #FFD000;
   }
 }
 // Animate Title
-.trackingInExpand {
+.tracking-in-expand {
 	-webkit-animation: trackingInExpand 1s linear both;
 	        animation: trackingInExpand 1s linear both;
 }
@@ -100,7 +98,7 @@ background: url('../assets/guatape.jpg');
 }
 
 // make the flag
-.colombiaContain{
+.colombia-contain{
   display: flex;
   justify-content: center;
   @media screen and (max-width:480px){
@@ -133,18 +131,18 @@ background: url('../assets/guatape.jpg');
 .container{
   text-align: center;
   padding: 1%;
-  @media screen and (max-width:$breakFirst){
+  @media screen and (max-width:600px){
     margin-top:10%;
   }
 }
 
 // animate container
-.slideInDm {
-	-webkit-animation: slideInDm 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: slideInDm 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.slide {
+	-webkit-animation: slide 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 // keyframes
-@-webkit-keyframes slideInDm {
+@-webkit-keyframes slide {
   0% {
     -webkit-transform: translateZ(-1400px) translateY(-800px);
     transform: translateZ(-1400px) translateY(-800px);
@@ -156,7 +154,7 @@ background: url('../assets/guatape.jpg');
     opacity: 1;
   }
 }
-@keyframes slideInDm {
+@keyframes slide {
   0% {
     -webkit-transform: translateZ(-1400px) translateY(-800px);
     transform: translateZ(-1400px) translateY(-800px);
@@ -169,37 +167,37 @@ background: url('../assets/guatape.jpg');
   }
 }
 // end of animation 
-.goQuiz{
+.go-quiz{
   width: 100%;
   margin: 2% auto;
   padding: 10%;
-  @include primaryColor;
+  @include box-color;
   border-radius: 20px;
   box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.75);
   h3{
-    @include fontRaleway(20px);
+    @include font-raleway(20px);
     font-weight:300;
   }
   p{
     margin: 2%;
     font-weight: 700;
-    @include fontRaleway(20px);
+    @include font-raleway(20px);
   }
   h6{
-    @include fontRaleway(14px);
+    @include font-raleway(14px);
     font-style: italic;
     font-weight: 300;
   }
 }
 
 footer{
-  @include primaryColor;
-  @include fontRaleway(20px);
+  @include box-color;
+  @include font-raleway(20px);
   padding: 1%;
     div{
     text-align: center;   
   @media screen and (max-width:480px){
-    @include fontRaleway(16px);
+    @include font-raleway(16px);
     }  
   }
 }

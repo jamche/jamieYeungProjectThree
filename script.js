@@ -4,14 +4,14 @@ const questionData = [
     question: 'In which of the city or cities below is tap water not drinkable?',
     option: ['Bogota', 'Medellin', 'Cartagena', 'All of the above'],
     answer: 'Cartagena',
-    answerText: 'Correct answer. Since Cartagena is in the coastal region of Colombia, tap water is not drinkable. In cities such Bogota & Medellin, it is drinkable as they are located within the mountainous regions, where the source of water is from.'
+    answerText: 'Correct! Since Cartagena is in the coastal region of Colombia, tap water is not drinkable. In Bogota & Medellin, tap water drinkable as they are located within the mountainous regions of the country. So save money and the environment by filling up your bottle!'
   },
   // second question data
   {
-    question: 'What is the approximate amount of Colombians that use Uber(Total Population is ~49.07 million?)',
+    question: 'What is the approximate amount of Colombians that use Uber(total Population is about ~49.07 million?)',
     option: ['1 mil', '2 mil', '3 mil', 'Isn\'t Uber illegal in Colombia?'],
     answer: '2 mil',
-    answerText:'Well done! There are about 2 million people and counting that use uber throughout the country(mostly in major cities) even if it is illegal. Uber is still cheaper than the other options that are currently available to travel throughout a major city. '
+    answerText:'Well done! There are about ~2 million people and counting that use uber throughout the country(mostly in major cities) even if it is illegal. Even if you are caught using Uber, the onus is on the driver and not the rider. Esssentially you will be told to get out of the car and move along. '
   },
   // third question data
   {
@@ -44,23 +44,23 @@ let j = 0;
 
 function displayQuestion(question) {
   
-  $('.qTitle').append(question[count].question);
+  $('.q-title').append(question[count].question);
   console.log(question[count].question);
   
   for (let i = 0; i < questionData[count].option.length; i++) {
   //makes the choice show up on the page
-    $('.options').append($(`<div> <label> for=choice </label>`).text(questionData[count].option[i])) +
+    $('.options').append($(`<div> <label> for=choice title </label>`).text(questionData[count].option[i])) +
     console.log(question[count].option[i]);
   //makes the input show up 
     $('.options').append($(`<input type="radio" value="${questionData[count].option[i]}"</div>`).attr({ id: 'answer', name: 'choice'}));
   }
 }
 // submit button that compares values if correct/incorrect
-$('.choiceBox').on('submit', function (e) {
+$('.choice-box').on('submit', function (e) {
   e.preventDefault();
   const radioValue = $('input[type="radio"]:checked').val();
   if (radioValue === questionData[count].answer) {
-    $('.answerBox').append($(`<p>${questionData[count].answerText}</p>`));
+    $('.answer-box').append($(`<p>${questionData[count].answerText}</p>`));
     // show next button when submit button is hit
     $('#next').css('visibility','visible');
     // hide submit button when submit is hit and answer is correct
@@ -69,18 +69,18 @@ $('.choiceBox').on('submit', function (e) {
     console.log(j);
     console.log('You picked the right option');
   }else{
-      alert('Incorect, pick another option and/or Pick an option');
+      alert('Incorrect, pick another option and/or Pick an option');
   }
   
     // count the answer +1 if correct
     // 
     // keep count of questions completed
-    
+    // display message at end
     if (j === 5) {
     alert('You\'ve completed the quiz! Hopefully you learned a bit more about Colombia in case you end up visiting the country. Come back later for more quizzes for other countries!');
 
     $('#next').css('display', 'none');
-    $('.buttonContainer').append($(`<a>Home</a>`).attr('href','index.html'));
+    $('.button-container').append($(`<a>Home</a>`).attr('href','index.html'));
     }
 })
 
@@ -90,9 +90,9 @@ $(next).on('click', function (event) {
   $('#next').css('visibility', 'hidden');
   $('input').css('display', 'initial');
   event.preventDefault();
-  $('.qTitle').html('');
+  $('.q-title').html('');
   $('.options').html('');
-  $('.answerBox').html('');
+  $('.answer-box').html('');
   count++;
   displayQuestion(questionData);
   
