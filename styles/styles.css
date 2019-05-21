@@ -671,7 +671,7 @@ ul li a {
   line-height: 1.5;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   .q-title {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
@@ -685,7 +685,7 @@ ul li a {
   line-height: 1.5;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   .options div {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
@@ -700,7 +700,7 @@ ul li a {
   line-height: 1.5;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   .answer-box {
     padding: 5%;
   }
@@ -716,7 +716,7 @@ ul li a {
   text-align: left;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   .answer-box p {
     font-size: 16px;
   }

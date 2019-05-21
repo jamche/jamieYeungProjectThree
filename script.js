@@ -33,9 +33,10 @@ const questionData = [
     question: 'There is a saying in Colombia that goes likes" No des papaya" which translates to "Don\'t give papaya". What does this mean? ',
     option: ['It\'s illegal to buy papayas', 'I shouldn\'t give my papayas to anyone', 'I shouldn\'t buy fruits on the street', 'Don\'t give an opportunity to be pickpocketed' ],
     answer: 'Don\'t give an opportunity to be pickpocketed',
-    answerText: 'Correct! Colombia is safer than ever to visit. But there are still issues with pickpockets. So one should always ensure that they always keep their valuables out of reach.'
+    answerText: 'Correct! Colombia is safer than ever to visit. But there are still issues with pickpockets. Just be aware of your surroundings and ensure you keep your valuables out of reach!'
   }
 ]
+// go thorugh array
 let count = 0;  
 // for completed
 let j = 0;
@@ -96,6 +97,5 @@ $(next).on('click', function (event) {
 $(function(){
 
   displayQuestion(questionData);
-  
 
 });

@@ -25,8 +25,6 @@ h1{
   font-weight: 700;
   text-align: center;
 }
-
-
 .nav-container{
   text-align: center;
 }
@@ -216,7 +214,7 @@ ul{
   .q-title{
    padding: 2%;
     @include font-raleway(20px);
-    @media screen and (max-width:480px) {
+    @media screen and (max-width:700px) {
         @include font-raleway(16px);
 
       }
@@ -224,14 +222,14 @@ ul{
   // options and answer styling
  .options div{
    @include font-raleway(20px);
-   @media screen and (max-width:480px) {
+   @media screen and (max-width:700px) {
         @include font-raleway(16px);
       }
   }
   .answer-box{
     padding: 0 5%;
     @include font-raleway(20px);
-    @media screen and (max-width:480px) {
+    @media screen and (max-width:700px) {
       padding: 5%;
     }
     p{
@@ -240,7 +238,7 @@ ul{
       border-style: ridge;
       padding: 1%;
       text-align: left;
-      @media screen and (max-width:480px) {
+      @media screen and (max-width:700px) {
         font-size: 16px;
       }
     }
