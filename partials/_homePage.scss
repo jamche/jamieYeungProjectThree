@@ -193,11 +193,11 @@ background: url('../assets/guatape.jpg');
 footer{
   @include box-color;
   @include font-raleway(20px);
-  padding: 1%;
+  padding: 2px;
     div{
-    text-align: center;   
-  @media screen and (max-width:480px){
-    @include font-raleway(16px);
+      text-align: center;   
+    @media screen and (max-width:480px){
+      @include font-raleway(16px);
     }  
   }
 }

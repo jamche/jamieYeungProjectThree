@@ -393,7 +393,7 @@ footer {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
   line-height: 1.5;
-  padding: 1%;
+  padding: 2px;
 }
 
 footer div {
@@ -712,6 +712,8 @@ ul li a {
   line-height: 1.5;
   border-width: 2px 0 2px 0;
   border-style: ridge;
+  padding: 1%;
+  text-align: left;
 }
 
 @media screen and (max-width: 480px) {
